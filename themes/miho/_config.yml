@@ -113,7 +113,7 @@ changyan_appkey: false
 # 友言，输入id
 youyan_id: false
 # disqus
-disqus: false
+disqus: maling
 
 # Analytics | 分析
 # 站长分析，输入站点id

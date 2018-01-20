@@ -3,23 +3,23 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Centos 7 下JDK 安装 | MaLing&#39;s Blog</title>
+  <title>Centos 7安装Oracle Java JDK 8.md | MaLing&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="MaLing,MaLing's Blog,JAVA,WEB" />
   
-  <meta name="description" content="查找并删除以前的版本1rpm -qa|grep jdk   1rpm -e  --nodeps java-1.7.0-openjdk-headless-1.7.0.111-2.6.7.2.el7_2.x86_64（注意这里nodeps后面的那串名称是通过上面命令查询出来的，查出几个卸载几个）  安装jdk 1rpm -ivh jdk-8u151-linux-x64.rpm  检查安装，以及配置环">
-<meta name="keywords" content="centos,java,jdk">
+  <meta name="description" content="一. 查找并删除以前的版本 查看当前系统个是否安装了jdk 1$ rpm -qa|grep jdk  卸载已安装的库 1$ rpm -e  --nodeps java-1.7.0-openjdk-headless-1.7.0.111-2.6.7.2.el7_2.x86_64（注意这里nodeps后面的那串名称是通过上面命令查询出来的，查出几个卸载几个）   二. 安装jdk 前往oracle 官网">
+<meta name="keywords" content="Centos 7,Java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Centos 7 下JDK 安装">
-<meta property="og:url" content="http://maling.win/2018/01/20/Centos-7-下JDK-安装/index.html">
+<meta property="og:title" content="Centos 7安装Oracle Java JDK 8.md">
+<meta property="og:url" content="http://maling.win/2018/01/20/Centos 7安装Oracle Java JDK 8/index.html">
 <meta property="og:site_name" content="MaLing&#39;s Blog">
-<meta property="og:description" content="查找并删除以前的版本1rpm -qa|grep jdk   1rpm -e  --nodeps java-1.7.0-openjdk-headless-1.7.0.111-2.6.7.2.el7_2.x86_64（注意这里nodeps后面的那串名称是通过上面命令查询出来的，查出几个卸载几个）  安装jdk 1rpm -ivh jdk-8u151-linux-x64.rpm  检查安装，以及配置环">
+<meta property="og:description" content="一. 查找并删除以前的版本 查看当前系统个是否安装了jdk 1$ rpm -qa|grep jdk  卸载已安装的库 1$ rpm -e  --nodeps java-1.7.0-openjdk-headless-1.7.0.111-2.6.7.2.el7_2.x86_64（注意这里nodeps后面的那串名称是通过上面命令查询出来的，查出几个卸载几个）   二. 安装jdk 前往oracle 官网">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-01-20T06:48:14.832Z">
+<meta property="og:updated_time" content="2018-01-20T07:27:33.510Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Centos 7 下JDK 安装">
-<meta name="twitter:description" content="查找并删除以前的版本1rpm -qa|grep jdk   1rpm -e  --nodeps java-1.7.0-openjdk-headless-1.7.0.111-2.6.7.2.el7_2.x86_64（注意这里nodeps后面的那串名称是通过上面命令查询出来的，查出几个卸载几个）  安装jdk 1rpm -ivh jdk-8u151-linux-x64.rpm  检查安装，以及配置环">
+<meta name="twitter:title" content="Centos 7安装Oracle Java JDK 8.md">
+<meta name="twitter:description" content="一. 查找并删除以前的版本 查看当前系统个是否安装了jdk 1$ rpm -qa|grep jdk  卸载已安装的库 1$ rpm -e  --nodeps java-1.7.0-openjdk-headless-1.7.0.111-2.6.7.2.el7_2.x86_64（注意这里nodeps后面的那串名称是通过上面命令查询出来的，查出几个卸载几个）   二. 安装jdk 前往oracle 官网">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -107,14 +107,14 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-Centos-7-下JDK-安装" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-Centos 7安装Oracle Java JDK 8" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="post-title" itemprop="name">
-      Centos 7 下JDK 安装
+      Centos 7安装Oracle Java JDK 8.md
     </h1>
     <div class="post-title-bar">
       <ul>
@@ -122,7 +122,7 @@
               <li>
                   <i class="fa fa-book"></i>
                   
-                      <a href="/categories/linux/">linux</a>
+                      <a href="/categories/Centos7WEB服务器搭建部署/">Centos7 WEB 服务器搭建部署</a>
                   
               </li>
           
@@ -143,36 +143,41 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <ol>
-<li>查找并删除以前的版本<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa|grep jdk</span><br></pre></td></tr></table></figure>
+            <h3 id="一-查找并删除以前的版本"><a href="#一-查找并删除以前的版本" class="headerlink" title="一. 查找并删除以前的版本"></a>一. 查找并删除以前的版本</h3><ol>
+<li><p>查看当前系统个是否安装了jdk</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ rpm -qa|grep jdk</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>卸载已安装的库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ rpm -e  --nodeps java-1.7.0-openjdk-headless-1.7.0.111-2.6.7.2.el7_2.x86_64（注意这里nodeps后面的那串名称是通过上面命令查询出来的，查出几个卸载几个）</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -e  --nodeps java-1.7.0-openjdk-headless-1.7.0.111-2.6.7.2.el7_2.x86_64（注意这里nodeps后面的那串名称是通过上面命令查询出来的，查出几个卸载几个）</span><br></pre></td></tr></table></figure>
-<ol>
-<li><p>安装jdk</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -ivh jdk-8u151-linux-x64.rpm</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>检查安装，以及配置环境变量,</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">which java #查找并显示给定命令的绝对路径</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -lrt /usr/bin/java</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -lrt /etc/alternatives/java</span><br></pre></td></tr></table></figure>
-<ol>
-<li>添加环境变量</li>
-</ol>
+<h3 id="二-安装jdk"><a href="#二-安装jdk" class="headerlink" title="二. 安装jdk"></a>二. 安装jdk</h3><ol>
+<li><p>前往oracle 官网下载rpm包</p>
 <blockquote>
+<p>jdk无法直接通过wget命令下载，可以通过浏览器进行下载rpm包然后上传至服务器，或者通过浏览器查看下载链接，直接在服务器上使用wget命令进行下载</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ wget -O jdk-8u151-linux-x64.rpm http://download.oracle.com/otn-pub/java/jdk/8u151-b12/e758a0de34e24606bca991d704f6dcbf/jdk-8u151-linux-x64.rpm?AuthParam=1516433290_757b25ac7249fbf158433d7b0ba98d82</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>安装包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ rpm -ivh jdk-8u151-linux-x64.rpm</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>3.检查安装，以及配置环境变量,<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">which</span> java <span class="comment">#查找并显示给定命令的绝对路径</span></span><br><span class="line">$ ls -lrt /usr/bin/java</span><br><span class="line">$ ls -lrt /etc/alternatives/java</span><br></pre></td></tr></table></figure></p>
+<ol>
+<li>添加环境变量<blockquote>
 <p>vi /etc/profile文件,最后添加一下配置</p>
-</blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">JAVA_HOME=/usr/java/jdk1.8.0_151</span><br><span class="line">JRE_HOME=/usr/java/jdk1.8.0_151/jre</span><br><span class="line">CLASSPATH=$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH</span><br><span class="line">PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$PATH</span><br><span class="line">export JAVA_HOME JRE_HOME PATH CLASSPATH</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>使修改立即生效</p>
 </blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">source /etc/profile   </span><br><span class="line">echo $PATH</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<blockquote>
+<p>使修改立即生效<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">source /etc/profile   </span><br><span class="line">echo $PATH</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2018年01月20日 14:48</p>
-        <p>原始链接： <a class="post-url" href="/2018/01/20/Centos-7-下JDK-安装/" title="Centos 7 下JDK 安装">http://maling.win/2018/01/20/Centos-7-下JDK-安装/</a></p>
+        <p>最后更新： 2018年01月20日 15:27</p>
+        <p>原始链接： <a class="post-url" href="/2018/01/20/Centos 7安装Oracle Java JDK 8/" title="Centos 7安装Oracle Java JDK 8.md">http://maling.win/2018/01/20/Centos 7安装Oracle Java JDK 8/</a></p>
         <footer>
             <a href="http://maling.win">
                 <img src="/images/logo.png" alt="MaLing">
@@ -229,7 +234,7 @@
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://maling.win/2018/01/20/Centos-7-下JDK-安装/&title=《Centos 7 下JDK 安装》 — MaLing's Blog&pic=http://maling.winimages/logo.png" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://maling.win/2018/01/20/Centos 7安装Oracle Java JDK 8/&title=《Centos 7安装Oracle Java JDK 8.md》 — MaLing's Blog&pic=http://maling.winimages/logo.png" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -239,22 +244,22 @@
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://maling.win/2018/01/20/Centos-7-下JDK-安装/&title=《Centos 7 下JDK 安装》 — MaLing's Blog&source=" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://maling.win/2018/01/20/Centos 7安装Oracle Java JDK 8/&title=《Centos 7安装Oracle Java JDK 8.md》 — MaLing's Blog&source=" data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
           <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://maling.win/2018/01/20/Centos-7-下JDK-安装/" data-title="Facebook">
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://maling.win/2018/01/20/Centos 7安装Oracle Java JDK 8/" data-title="Facebook">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Centos 7 下JDK 安装》 — MaLing's Blog&url=http://maling.win/2018/01/20/Centos-7-下JDK-安装/&via=http://maling.win" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Centos 7安装Oracle Java JDK 8.md》 — MaLing's Blog&url=http://maling.win/2018/01/20/Centos 7安装Oracle Java JDK 8/&via=http://maling.win" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://maling.win/2018/01/20/Centos-7-下JDK-安装/" data-title="Google+">
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://maling.win/2018/01/20/Centos 7安装Oracle Java JDK 8/" data-title="Google+">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -264,7 +269,7 @@
 <div class="post-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" id="wxShare-close">×</a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://maling.win/2018/01/20/Centos-7-下JDK-安装/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://maling.win/2018/01/20/Centos 7安装Oracle Java JDK 8/" alt="微信分享二维码">
 </div>
 
 <div class="mask"></div>
@@ -276,11 +281,9 @@
   <li class="article-footer-tags">
     <i class="fa fa-tags"></i>
       
-    <a href="/tags/centos/" class="color2">centos</a>
+    <a href="/tags/Centos7/" class="color4">Centos 7</a>
       
-    <a href="/tags/java/" class="color5">java</a>
-      
-    <a href="/tags/jdk/" class="color4">jdk</a>
+    <a href="/tags/Java/" class="color5">Java</a>
       
   </li>
 
@@ -291,6 +294,12 @@
 </article>
 
 
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一-查找并删除以前的版本"><span class="post-toc-text">一. 查找并删除以前的版本</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#二-安装jdk"><span class="post-toc-text">二. 安装jdk</span></a></li></ol>
+        </nav>
+    </aside>
+    
 
 <nav id="article-nav">
   
@@ -358,10 +367,10 @@
 <div class="sidebar-menu-box" id="sidebar-menu-box">
     <div class="sidebar-menu-box-container">
         <div id="sidebar-menu-box-categories">
-            <a class="category-link" href="/categories/linux/">linux</a>
+            <a class="category-link" href="/categories/Centos7-WEB-服务器搭建部署/">Centos7 WEB 服务器搭建部署</a>
         </div>
         <div id="sidebar-menu-box-tags">
-            <a href="/tags/centos/" style="font-size: 10px;">centos</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/jdk/" style="font-size: 10px;">jdk</a>
+            <a href="/tags/Centos-7/" style="font-size: 10px;">Centos 7</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a>
         </div>
     </div>
     <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
@@ -394,7 +403,7 @@
     <div class="mobile-header-tag-container">
         <span class="title">Tags</span>
         <div id="mobile-header-container-tags">
-            <a href="/tags/centos/" style="font-size: 10px;">centos</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/jdk/" style="font-size: 10px;">jdk</a>
+            <a href="/tags/Centos-7/" style="font-size: 10px;">Centos 7</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a>
         </div>
     </div>
 </div>

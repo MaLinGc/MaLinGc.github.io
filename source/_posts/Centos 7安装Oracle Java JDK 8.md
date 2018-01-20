@@ -25,7 +25,7 @@ $ wget -O jdk-8u151-linux-x64.rpm http://download.oracle.com/otn-pub/java/jdk/8u
 ```
 $ rpm -ivh jdk-8u151-linux-x64.rpm
 ```
-3.检查安装，以及配置环境变量,
+3. 检查安装，以及配置环境变量,
 ```bash
 $ which java #查找并显示给定命令的绝对路径
 $ ls -lrt /usr/bin/java
@@ -40,8 +40,9 @@ CLASSPATH=$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH
 PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$PATH
 export JAVA_HOME JRE_HOME PATH CLASSPATH
 ```
+
 > 使修改立即生效
-```shell
-source /etc/profile   
-echo $PATH
+```bash
+$ source /etc/profile   
+$ echo $PATH
 ```

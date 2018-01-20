@@ -3,7 +3,7 @@ title: Centos 7安装Oracle Java JDK 8
 date: 2018-01-20 14:45:29
 categories: Centos7 WEB 服务器搭建部署
 tags: 
-    - Centos 7
+    - Linux
     - Java
 ---
 ### 一. 查找并删除以前的版本
